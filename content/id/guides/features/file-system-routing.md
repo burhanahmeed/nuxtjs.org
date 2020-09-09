@@ -1,28 +1,28 @@
 ---
 title: File System Routing
-description: Nuxt.js automatically generates the vue-router configuration based on your file tree of Vue files inside the pages directory. When you create a .vue file in your pages directory you will have basic routing working with no extra configuration needed.
+description: Nuxt.js akan secara otomatis membuat konfigurasi vue-router berdasarkan turunan berkas dari berkas Vue di dalam direktori _pages_. Ketika Anda membuat berkas .vue di direktori _pages_, Anda akan memiliki _routing_ paling dasar terpasang tanpa tambahan konfigurasi lainnya.
 position: 3
 category: features
 questions:
-  - question: What is the name of the component you use to navigate between pages?
+  - question: Apa nama komponen yang digunakan untuk melakukan navigasi diantara halaman?
     answers:
       - '<a>'
       - '<NuxtLink>'
       - '<Nuxt>'
     correctAnswer: '<NuxtLink>'
-  - question: What do you need to do to generate an automatic router configuration?
+  - question: Apa yang Anda lakukan untuk menghasilkan konfigurasi _router_ secara otomatis?
     answers:
-      - add a .vue file to the pages directory
-      - create a router.config file
-      - 'add a <NuxtLink> to your page'
-    correctAnswer: add a .vue file to the pages directory
-  - question: Which of the following will not create a dynamic route?
+      - menambahkan berkas .vue pada direktori _pages_
+      - membuat berkas router.config
+      - menambahkan <NuxtLink> pada halaman
+    correctAnswer: menambahkan berkas .vue pada direktori _pages_
+  - question: Yang mana dari berikut ini yang tidak akan membuat rute dinamis?
     answers:
       - dynamic.vue
       - _slug.vue
       - _slug/index.vue
     correctAnswer: dynamic.vue
-  - question: Dynamic routes are ignored by the nuxt generate command?
+  - question: rute dinamis diabaikan oleh perintah _nuxt generate_?
     answers:
       - True
       - False
@@ -33,56 +33,56 @@ questions:
       - $route.id
       - $route.params.users.id
     correctAnswer: $route.params.id
-  - question: How do you define the parent component of a nested route?
+  - question: Bagaimana Anda mendefinisikan komponen induk dari rute yang bersarang?
     answers:
-      - create a Vue file called parent inside the directory which contains the children views
-      - create a Vue file with a different name as the directory which contains the children views
-      - create a Vue file with the same name as the directory which contains the children views
-    correctAnswer: create a Vue file with the same name as the directory which contains the children views
-  - question: If you do not know the depth of your URL structure, you can use which file to dynamically match nested paths?
+      - membuat berkas Vue yang dipanggil oleh induk di dalam direktori yang terdapat _views_
+      - membuat berkas Vue dengan nama yang berbeda dengan direktori yang terdapat _views_
+      - membuat berkas Vue dengan nama yang sama dengan direktori yang terdapat _views_
+    correctAnswer: membuat berkas Vue dengan nama yang sama dengan direktori yang terdapat _views_
+  - question: Jika Anda tidak mengetahui seberapa dalam struktur _URL_, Anda dapat menggunakan berkas mana yang secara dinamis cocok dengan alur yang bersarang?
     answers:
       - _.vue
       - _index.vue
       - _id.vue
     correctAnswer: _.vue
-  - question: Which components can you use to render named views?
+  - question: Mana komponen yang dapat digunakan untuk me-_render_ _views_?
     answers:
-      - '<Nuxt> and <Child>'
-      - '<Nuxt> and <NuxtChild>'
-      - '<NuxtChild> and <NuxtLink>'
-    correctAnswer: '<Nuxt> and <NuxtChild>'
-  - question: In Nuxt.js which file can you create to force the scroll position to the top for every route?
+      - '<Nuxt> dan <Child>'
+      - '<Nuxt> dan <NuxtChild>'
+      - '<NuxtChild> dan <NuxtLink>'
+    correctAnswer: '<Nuxt> dan <NuxtChild>'
+  - question: Di Nuxt.js, berkas mana yang dapat Anda gunakan untuk membuat pemaksaan posisi gulir (_scroll_) ke atas pada setiap rute?
     answers:
       - app/router.scrollBehavior.js
       - app/scrollBehavior.js
       - app/router.js
     correctAnswer: app/router.scrollBehavior.js
-  - question: In Nuxt.js you can add trailing slashes which will be appended to every route?
+  - question: Di Nuxt.js Anda dapat menambahkan pemotong (_slash_) yang akan dimasukkan ke setiap rute?
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-Nuxt.js automatically generates the vue-router configuration based on your file tree of Vue files inside the pages directory. When you create a .vue file in your pages directory you will have basic routing working with no extra configuration needed.
+Nuxt.js akan secara otomatis membuat konfigurasi vue-router berdasarkan turunan berkas dari berkas Vue di dalam direktori _pages_. Ketika Anda membuat berkas .vue di direktori _pages_, Anda akan memiliki _routing_ paling dasar terpasang tanpa tambahan konfigurasi lainnya.
 
-Sometimes you might need to create dynamic routes or nested routes or you might need to further configure the router property. This chapter will go through everything you need to know in order to get the best out of your router.
+Terkadang Anda mungin perlu membuat rute dinamis atau rute bersarang atau Anda perlu konfigurasi rute lebih lanjut. Pada bagian ini akan memberi tahu Anda segalanya apa yang Anda perlu tahu untuk mengoptimalkan konfigurasi _router_.
 
 <base-alert type="info">
 
-Nuxt.js gives you automatic code splitting for your routes, no configuration is needed
+Nuxt.js memberikan Anda pemisahan kode secara otomatis untuk rute. tidak ada konfigurasi yang dibutuhkan.
 
 </base-alert>
 
 <base-alert type="info">
 
-Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) to navigate between pages
+Gunakan [komponen NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) untuk melakukan navigasi antara halaman.
 
 </base-alert>
 
 ```html
 <template>
-  <nuxt-link to="/">Home page</nuxt-link>
+  <nuxt-link to="/">Halaman Beranda</nuxt-link>
 </template>
 ```
 
