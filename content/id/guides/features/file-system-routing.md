@@ -86,9 +86,9 @@ Gunakan [komponen NuxtLink](/guides/features/nuxt-components#the-nuxtlink-compon
 </template>
 ```
 
-## Basic Routes
+## Rute Dasar
 
-This file tree:
+Turunan berkas ini:
 
 ```
 pages/
@@ -98,7 +98,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+akan secara otomatis menghasilkan:
 
 ```js
 router: {
@@ -122,11 +122,11 @@ router: {
 }
 ```
 
-## Dynamic Routes
+## Rute Dinamis
 
-Sometimes it is not possible to know the name of the route such as when we make a call to an api to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
+Terkadang ini tidak memungkinkan untuk mengetahui nama dari rute tersebut ketika kita memanggil sebuah program aplikasi antar muka (_api_) untuk mendapatkan daftar pengguna atau postingan _blog_. Kita memanggil rute dinamis tersebut. Untuk membuat rute dinamis Anda perlu membuat berkas yang diawali dengan nama berkas (\_) sebelum .vue atau sebelum nama dari direktori. Anda dapat memberikan nama berkas atau direktori apapun yang Anda mau namun Anda harus memberikan awalan dengan garis bawah.
 
-This file tree:
+Turunan berkas ini:
 
 ```
 pages/
@@ -138,7 +138,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+akan secara otomatis menghasilkan:
 
 ```js
 router: {
@@ -169,7 +169,7 @@ router: {
 
 <base-alert type="info">
 
-As you can see the route named `users-id` has the path `:id?` which makes it optional, if you want to make it required, create an `index.vue` file in the `users/_id` directory instead.
+Seperti yang dapat Anda lihat, nama rute `users-id` memiliki jalur `:id?` yang membuatnya opsional, jika Anda ingin membuatnya wajib maka buatlah sebuah `index.vue` di direktori `users/_id`.
 
 </base-alert>
 
