@@ -175,23 +175,23 @@ Seperti yang dapat Anda lihat, nama rute `users-id` memiliki jalur `:id?` yang m
 
 <base-alert type="info">
 
-As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link tags and generate your dynamic routes based on those links. However if you have pages that are not linked to such as a secret page, then you will need to manually generate those dynamic routes.
+Pada Nuxt >= v2.13, terdapat _crawler_ yang terpasang dan akan melakukan _crawl_ penanda tautan Anda dan menghasilkan rute dinamis bedasarkan tautan tersebut. Bagaimanapun itu jika Anda memiliki halaman yang tidak terhubung ke halaman yang rahasia, maka Anda akan memerlukan membuat rute dinamis tersebut secara manual.
 
 </base-alert>
 
 <base-alert type="next">
 
-[Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
+[Pembuat situs statis](/guides/concepts/static-site-generation) untuk situs statis.
 
 </base-alert>
 
-### Locally Accessing Route Params
+### Mengakses parameter _Route_ secara Lokal
 
-You can access the current route parameters within your local page or component by referencing `this.$route.params.{parameterName}`. For example, if you had a dynamic users page (`users\_id.vue`) and wanted to access the `id` parameter to load the user or process information, you could access the variable like this: `this.$route.params.id`.
+Anda dapat mengakses parameter rute saat ini didalam halaman atau komponen dengan mengambil referensi `this.$route.params.{parameterName}`. Contohnya, jika Anda memiliki halaman pengguna dinamis (`users\_id.vue`) dan ingin mengakses parameter `id` untuk memuat informasi pengguna, Anda bisa melakukan akses dengan kode seperti berikut ini `this.$route.params.id`.
 
-## Nested Routes
+## Rute Bersarang (_Nested_)
 
-Nuxt.js lets you create nested routes by using the children routes of vue-router. To define the parent component of a nested route, you need to create a Vue file with the same name as the directory which contains your children views.
+Nuxt.js mengizinkan Anda untuk membuat rute bersarang dengan menggunakan rute anak dari vue-router. Untuk mendefinisikan komponen induk dari rute bersarang, Anda perlu membuat berkas Vue dengan nama yang sama dengan direktori yang mengandung _views_.
 
 <base-alert>
 
