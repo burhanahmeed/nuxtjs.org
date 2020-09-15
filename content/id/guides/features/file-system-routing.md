@@ -195,11 +195,11 @@ Nuxt.js mengizinkan Anda untuk membuat rute bersarang dengan menggunakan rute an
 
 <base-alert>
 
-Don't forget to include the [NuxtChild component](/guides/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
+Jangan lupa untuk memasukkan [komponen NuxtChild](/guides/features/nuxt-components#the-nuxtchild-component) di dalam komponen induk (`.vue` file).
 
 </base-alert>
 
-This file tree:
+Turunan berkas ini:
 
 ```
 pages/
@@ -209,7 +209,7 @@ pages/
 --| users.vue
 ```
 
-will automatically generate:
+akan secara otomatis menghasilkan:
 
 ```js
 router: {
@@ -234,11 +234,11 @@ router: {
 }
 ```
 
-## Dynamic Nested Routes
+## Rute Bersarang Dinamis
 
-This is not a common scenario, but it is possible with Nuxt.js to have dynamic children inside dynamic parents.
+Ini bukanlah skenario yang umum, namun ini memungkinkan dengan Nuxt.js untuk memiliki rute anak yang dinamis di dalam rute induk yang dinamis.
 
-This file tree:
+Turunan berkas ini:
 
 ```
 pages/
@@ -252,7 +252,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+akan secara otomatis menghasilkan:
 
 ```js
 router: {
@@ -293,11 +293,11 @@ router: {
 }
 ```
 
-## Unknown Dynamic Nested Routes
+## Rute Bersarang Dinamis yang Tidak Diketahui
 
-If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* request.
+Jika Anda tidak mengatahui seberapa dalam struktur _URL_ Anda, Anda dapat menggunakan `_.vue` untuk membuat rute bersarang secara dinamis. Hal ini akan mengarahkan permintaan yang tidak sesuai dengan permintaan rute yang spesifik.
 
-This file tree:
+Turunan berkas ini:
 
 ```
 pages/
@@ -308,7 +308,7 @@ pages/
 --| index.vue
 ```
 
-Will handle requests like this:
+Ini akan menangani permintaan seperti ini:
 
 ```
 / -> index.vue
@@ -321,31 +321,31 @@ Will handle requests like this:
 
 <base-alert type="info">
 
-Handling 404 pages is now up to the logic of the `_.vue` page.
+Menangani halaman 404 sekarang bisa dilakukan di dalam logika kode dari halaman `_.vue`.
 
 </base-alert>
 
-## Extending the router
+## Memperpanjang _router_
 
-There are multiple ways to extend the routing with Nuxt:
+Ada beberapa cara untuk memperpanjang rute pada Nuxt:
 
-- [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
-- component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
-- Use the [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
+- [router-extras-module](https://github.com/nuxt-community/router-extras-module) untuk melakukan kustomisasi parameter rute di dalam halaman
+- Komponen [@nuxtjs/router](https://github.com/nuxt-community/router-module) untuk menimpa _router_ Nuxt dan menuliskan berkas `router.js` milik anda sendiri
+- Gunakan properti [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) di `nuxt.config.js`
 
-## The router Property
+## Properti _router_
 
-The router property lets you customize the Nuxt.js router (vue-router).
+Properti _router_ mengizinkan Anda melakukan kustomisasi _router_ Nuxt.js (vue-router).
 
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    // customize the Nuxt.js router
+    // mengkustom router Nuxt.js
   }
 }
 ```
 
-### Base:
+### Dasar:
 
 The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
 
