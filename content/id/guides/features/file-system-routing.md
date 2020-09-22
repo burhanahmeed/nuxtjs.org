@@ -399,8 +399,6 @@ Skema dari rute harus mengikuti [vue-router](https://router.vuejs.org/en/)
 
 <base-alert>
 
-When adding routes that use [Named Views](https://nuxtjs.org/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
-
 Ketika menambahkan rute yang menggunakan [_Views_ yang dinamai](https://nuxtjs.org/guide/routing#named-views), jangan lupa menambahkan `chunkNames` dari `components` yang dinamai.
 
 </base-alert>
