@@ -347,19 +347,19 @@ export default {
 
 ### Dasar:
 
-The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
+Dasar _URL_ dari aplikasi. Contohnya jika keseluruhan aplikasi halaman tunggal disajikan di bawah `/app/`, kemudian dasarannya seharusnya menggunakan nilai `'/app/'`.
 
 <base-alert type="next">
 
-[Router Base Property](/guides/configuration-glossary/configuration-router#base)
+[Properti dasar rute](/guides/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
 ### extendRoutes
 
-You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
+Anda mungkin ingin memperpanjang rute yang dibuat oleh Nuxt.js. Anda dapat melakukan seperti itu melalui opsi `extendRoutes`.
 
-Example of adding a custom route:
+Contoh penambahan rute kustom:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -375,16 +375,16 @@ export default {
 }
 ```
 
-If you want to sort your routes, you can use the  `sortRoutes(routes)`  function from `@nuxt/utils`:
+Jika Anda ingin mengurutkan rute, Anda dapat menggunakan fungsi `sortRoutes(routes)` dari `@nuxt/utils`:
 
 ```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
     extendRoutes(routes, resolve) {
-      // Add some routes here ...
+      // tambahkan beberapa rute di sini
 
-      // and then sort them
+      // dan urutkan mereka
       sortRoutes(routes)
     }
   }
@@ -393,13 +393,15 @@ export default {
 
 <base-alert>
 
-The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
+Skema dari rute harus mengikuti [vue-router](https://router.vuejs.org/en/)
 
 </base-alert>
 
 <base-alert>
 
 When adding routes that use [Named Views](https://nuxtjs.org/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
+
+Ketika menambahkan rute yang menggunakan [_Views_ yang dinamai](https://nuxtjs.org/guide/routing#named-views), jangan lupa menambahkan `chunkNames` dari `components` yang dinamai.
 
 </base-alert>
 
@@ -410,7 +412,7 @@ export default {
       routes.push({
         path: '/users/:id',
         components: {
-          default: resolve(__dirname, 'pages/users'), // or routes[index].component
+          default: resolve(__dirname, 'pages/users'), // atau routes[index].component
           modal: resolve(__dirname, 'components/modal.vue')
         },
         chunkNames: {
@@ -424,43 +426,43 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
+[Properti extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
 ### fallback
 
-Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
+Anda dapat mengontrol apakah _router_ harus kembali ke mode _hash_ ketika peramban tidak mendukung `history.pushState` namun mode ditetapkan sebagai mode _history_.
 
 <base-alert type="next">
 
-[fallback Property](/guides/configuration-glossary/configuration-router#fallback)
+[Properti fallback](/guides/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
 ### mode
 
-Configure the router mode, it is not recommended to change it due to server-side rendering.
+Lakukan konfigurasi pada _router_, namun ini tidak direkomendasikan untuk mengganti karena per-_render_-an sisi server.
 
 <base-alert type="next">
 
-[mode Property](/guides/configuration-glossary/configuration-router#mode)
+[Properti pada mode](/guides/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
 ### parseQuery / stringifyQuery
 
-Provide custom query string parse / stringify functions.
+Memberikan kustom untaian kueri / fungsi stringify.
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[Properti parseQuery / stringifyQuery](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
 ### routeNameSplitter
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt.js will generate the route name programmatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+Anda mungkin ingin mengubah pemisah antara nama rute yang digunakan Nuxt.js. Anda dapat melakukannya melalui opsi `routeNameSplitter` pada berkas konfigurasi Anda. Misalkan kita memiliki halaman berkas `pages/posts/_id.vue`. Nuxt.js akan membuat nama rute secara terprogram, pada hal ini `posts-id`. Mengubah konfigurasi `routeNameSplitter` ke `/`, maka akan mengubah rute menjadi `posts/id`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -472,21 +474,21 @@ export default {
 
 ### scrollBehavior
 
-The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered.
+Opsi `scrollBehavior` mengizinkan Anda mendefinisikan sebuah perilaku yang dikustomisasi untuk posisi _scroll_ diantara rute. Metode ini dipanggil setiap kali halaman di-_render_.
 
 <base-alert type="next">
 
-To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+Untuk mempelajari lebih lanjut tentang hal ini, lihat [dokumentasi vue-router scrollBehavior](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
 
 </base-alert>
 
-Available since:v2.9.0:
+Tersedia sejak versi: v2.9.0
 
-In Nuxt.js you can use a file to overwrite the router scrollBehavior. This file should be placed in a folder called app.
+Pada Nuxt.js Anda dapat menggunakan sebuah berkas untuk menimpa scrollBehavior pada _router_. Berkas ini harus diletakkan di sebuah direktori yang disebut app.
 
 `~/app/router.scrollBehavior.js`.
 
-Example of forcing the scroll position to the top for every route:
+Contoh dari memaksakan posisi _scroll_ ke atas untuk setiap rute:
 
 ```js{}[app/router.scrollBehavior.js]
 export default function (to, from, savedPosition) {
@@ -496,21 +498,21 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[Nuxt.js default `router.scrollBehavior.js` file.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
+[Berkas bawaan Nuxt.js `router.scrollBehavior.js`.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
 </base-alert>
 
 <base-alert type="next">
 
-[scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[Properti scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
 ### trailingSlash
 
-Available since: v2.10
+Tersedia sejak versi: v2.10
 
-If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
+Jika opsi ini dipasang ke `true`, maka garis miring di akhir akan dimasukkan pada setiap rute. Jika dipasang sebagai `false`, maka mereka akan dilepaskan.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -522,13 +524,13 @@ export default {
 
 <base-alert>
 
-This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else other than `undefined`(which is the default value), the opposite route will stop working. Thus 301 redirects should be in place and your *internal linking* has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa.
+Opsi ini seharusnya tidak diatur tanpa persiapan dan harus dicoba sepenuhnya. Ketika mengatur `router.trailingSlash` ke tempat selain `undefined`(merupakan nilai bawaan), selain itu rute tidak akan bekerja. Jadi kode pengalihan 301 harus berada ditempat dan tautan internal Anda harus diadaptasikan secara benar. Jika Anda mengatur `trailingSlash` ke `true`, maka hanya `example.com/abc/` yang akan bekerja namun `example.com/abc` tidak. Jika diatur `false`, maka sebaliknya.
 
 </base-alert>
 
 <base-alert type="next">
 
-[trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
+[Properti trailingSlash](/guides/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 
