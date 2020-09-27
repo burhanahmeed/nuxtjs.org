@@ -1,64 +1,64 @@
 ---
 title: Loading
-description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+description: Hal yang di luar kotak, Nuxt.js memberikan Anda proses _loading_ komponen sendiri yang ditampilkan diantara rute. Anda dapat melakukan kustomisasi, menonaktifkan atau bahkan membuat proses _loading_ milik Anda sendiri.
 position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In order for the Nuxt.js loading progress bar to work what do you have to do?
+  - question: Untuk membuat proses _loading_ Nuxt.js bekerja, apa yang Anda perlu lakukan?
     answers:
-      - Nothing, it just works
-      - set loading to true in the nuxt.config.js file
-      - create a loading component
-    correctAnswer: Nothing, it just works
-  - question: Where can you modify the styles for the default progress bar?
+      - Tidak ada, itu langsung bekerja
+      - Mengatur proses _loading_ menjadi true pada nuxt.config.js
+      - Membuat komponen _loading_
+    correctAnswer: Tidak ada, itu langsung bekerja
+  - question: Dimana Anda dapat melakukan modifikasi gaya untuk proses _loading_ bawaan?
     answers:
-      - layout component
-      - page component
+      - komponen layout
+      - komponen page
       - nuxt.config.js
-    correctAnswer: layout component
-  - question: In which property do you set the styles for the progress bar in the nuxt.config.js file?
+    correctAnswer: komponen layout
+  - question: Pada properti mana anda dapat mengatur gaya untuk proses _loading_ di nuxt.config.js?
     answers:
       - progress
       - loading
       - loadingBar
     correctAnswer: loading
-  - question: What do you add in the nuxt.config.js file to disable loading?
+  - question: Apa yang Anda tambahkan pada nuxt.config.js untuk menonaktifkan _loading_?
     answers:
       - 'loadingBar: false'
       - "loading: 'none'"
       - 'loading: false'
     correctAnswer: 'loading: false'
-  - question: You can disable the loading on specific pages?
+  - question: Anda dapat menonaktifkan _loading_ pada halaman tertentu?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What do you use to programmatically start the loading bar?
+  - question: Apa yang Anda gunakan untuk memulai batang _loading_ secara terprogram?
     answers:
       - $nuxt.loading.start()
       - $nuxt.loading()
       - $loading.start()
     correctAnswer: $nuxt.loading.start()
-  - question: Which property do you use to make your progress bar continuous for when the loading takes longer than the duration?
+  - question: Bagian properti mana yang Anda gunakan untuk membuat batang proses secara terus-menerus ketika _loading_ mengambil waktu yang lama dari yang diprediksi?
     answers:
       - "duration: 'continuous'"
       - "loading: 'continuous'"
       - 'continuous: true'
     correctAnswer: 'continuous: true'
-  - question: Which two methods are required when creating a custom loading component?
+  - question: Mana dua metode yang dibutuhkan ketika membuat komponen _loading_ secara kustom?
     answers:
-      - start() and fail()
-      - start() and finish()
-      - loading() and finish()
-    correctAnswer: start() and finish()
-  - question: Once you have created your new loading.vue component how do you use it?
+      - start() dan fail()
+      - start() dan finish()
+      - loading() dan finish()
+    correctAnswer: start() dan finish()
+  - question: Ketika Anda telah membuat komponen loading.vue, bagaimana Anda menggunakan itu?
     answers:
-      - import it into the layouts page
-      - add it in the nuxt.config.js under the loading property
-      - add it to the nuxt.config.js under the plugins property
-    correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is in SPA mode what do you add to the loading property?
+      - diimpor ke halaman layout
+      - menambahkan di nuxt.config.js dibawah properti _loading_
+      - menambahkan di nuxt.config.js dibawah properti _plugins_
+    correctAnswer: menambahkan di nuxt.config.js dibawah properti _loading_
+  - question: Untuk menambahkan pemuat lingkaran berputar ketika Nuxt.js di metode SPA, apa yang Anda tambahkan ke properti _loading_?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -66,7 +66,7 @@ questions:
     correctAnswer: 'name: circle'
 ---
 
-Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+Hal yang di luar kotak, Nuxt.js memberikan Anda proses _loading_ komponen sendiri yang ditampilkan diantara rute. Anda dapat melakukan kustomisasi, menonaktifkan atau bahkan membuat proses _loading_ milik Anda sendiri.
 
 ## Customising the Progress Bar
 
