@@ -68,11 +68,11 @@ questions:
 
 Hal yang di luar kotak, Nuxt.js memberikan Anda proses _loading_ komponen sendiri yang ditampilkan diantara rute. Anda dapat melakukan kustomisasi, menonaktifkan atau bahkan membuat proses _loading_ milik Anda sendiri.
 
-## Customising the Progress Bar
+## Melakukan kustomisasi batang proses
 
-Among other properties, the color, size, duration and direction of the progress bar can be customized to suit your application's needs. This is done by updating the `loading` property of the `nuxt.config.js` with the corresponding properties.
+Diantara properti lainnya, warna, ukuran, durasi, dan arah dari batang proses dapat dikustomisasi untuk menyesuaikan aplikasi Anda. Ini dilakukan dengan melakukan update properti `loading` dari `nuxt.config.js` sesuai dengan properti,
 
-For example, to set a blue progress bar with a height of 5px, we update the `nuxt.config.js` to the following:
+Contohnya, untuk mengatur sebuah batang proses berwarna biru dengan tinggi 5px, kita perbarui `nuxt.config.js` seperti berikut ini:
 
 ```js
 export default {
@@ -83,18 +83,18 @@ export default {
 }
 ```
 
-List of properties to customize the progress bar.
+Daftar properti untuk melakukan kustomisasi batang proses.
 
-| Key         | Type    | Default | Description                                                                                                                       |     |
-| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
-| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
-| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
-| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
-| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
-| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
-| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
-| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
-| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
+| Key         | Tipe    | Nilai anggapan | Deskripsi                                                                                                                   |     |
+| ----------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
+| color       | String  | 'black'        | Warna CSS untuk batang proses                                                                                               |     |
+| failedColor | String  | 'red'          | Warna CSS dari batang proses ketika terjadi sebuah kegalatan ketika me-_render_ (jika data atau `fetch` mengirimkan error). |     |
+| height      | String  | '2px'          | Tinggi dari batang proses (digunakan pada properti gaya dari batang proses).                                                |     |
+| throttle    | Number  | 200            | Dalam milidetik, tunggu pada waktu tertentu untuk menampilkan batang proses. Berguna untuk mencegah batang dari _flashing_. |     |
+| duration    | Number  | 5000           | Dalam milidetik, durasi maksimal dari batang proses, Nuxt.js mengasumsikan bahwa rute akan di-_render_ sebelum 5 detik.     |     |
+| continuous  | Boolean | false          | Tetap menjalankan animasi batang proses ketika memuat lebih lama dari yang diharapkan.                                      |     |
+| css         | Boolean | true           | Atur ke `false` untuk menghapus gaya dari batang proses bawaan (dan tambahkan milik Anda sendiri).                          |     |
+| rtl         | Boolean | false          | Atur arah dari batang proses dari kanan ke kiri.                                                                            |     |
 
 ## Disable the Progress Bar
 
